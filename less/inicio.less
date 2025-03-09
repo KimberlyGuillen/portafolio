@@ -1,0 +1,232 @@
+@import "variables.less";
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: @secondary-color;
+    color: white;
+}
+
+
+.card-mixin {
+    display: inline-block;
+    background-color: #f8f8f8;
+    color: @secondary-color;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    margin: 1rem;
+    padding: 1rem;
+    text-align: center;
+    transition: transform 0.3s ease;
+
+    &:hover {
+        transform: translateY(-10px);
+    }
+}
+
+// Media Query para pantallas pequeñas
+@media (max-width: #breaks[tablet]) {
+    header {
+        nav {
+            padding: 15px 0;
+            text-align: center;
+            background-color: @primary-color;
+            margin: 0 30px;
+            border-radius: 0 0 30px 30px;
+            
+            ul {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 0;
+                margin: 0;
+
+                li {
+                    display: block;
+                    width: 80%;
+                    text-align: center;
+                    margin-left: 10px;
+
+                    a {
+                        display: block;
+                        width: 80%;
+                        padding: 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+
+        img {
+            width: 80%;
+            height: auto;
+            margin-bottom: 15px;
+        }
+    }
+
+    .hero-content {
+        flex-direction: column;
+    }
+
+    .info {
+        width: 90%;
+    }
+}
+
+// Sección Hero
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: @secondary-color-dark;
+    padding: 40px;
+    position: relative;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 900px;
+
+    &-content {
+        display: flex;
+        align-items: center;
+    }
+
+    img {
+        width: 250px;
+        height: 250px;
+        border-radius: 10px;
+        object-fit: cover;
+        margin-right: 20px;
+    }
+
+    .info {
+        max-width: 500px;
+
+        h1 {
+            font-size: 26px;
+            font-weight: bold;
+            color: white;
+        }
+
+        h2 {
+            font-size: 20px;
+            font-weight: bold;
+            color: @primary-color-light;
+        }
+
+        p {
+            font-size: 14px;
+            color: white;
+            line-height: 1.5;
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid white;
+        }
+    }
+}
+
+// Botón de descarga
+.descarga, .btn {
+    display: inline-block;
+    text-decoration: none;
+    padding: 0.7rem 1.5rem;
+    color: @primary-text-color;
+    background-color: @primary-color;
+    border-radius: 8px;
+    margin-top: 2rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+// Sección Habilidades
+.Habilidades {
+    text-align: center;
+    background-color: white;
+    color: black;
+    padding: 40px 20px;
+    border-radius: 20px;
+    margin: 10px;
+
+    h3 {
+        color: @primary-color;
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .card {
+        .card-mixin;
+
+        img {
+            width: 100%;
+            height: 150px;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+
+        h3 {
+            font-size: 1.2rem;
+            margin: 0.5rem 0;
+        }
+
+        p {
+            font-size: 0.9rem;
+        }
+    }
+    
+}
+
+.Datos {
+    text-align: center;
+    padding: 20px;
+    min-height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Datos h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: @primary-color-dark; 
+}
+
+.Datos .Tel, 
+.Datos .Correo {
+    background-color: @primary-text-color; 
+    border: 1px solid darken(@primary-text-color, 20%); 
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px; 
+    margin: 7px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.Datos img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 9px; 
+}
+
+.Datos p {
+    font-size: 1.2rem;
+    color: @secondary-text-color; 
+}

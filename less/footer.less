@@ -1,0 +1,52 @@
+@import "variables.less";
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: @secondary-bg-color;
+    color: @primary-text-color;
+}
+
+/* Pie de página */
+.footer {
+    background-color: @footer-bg-color;
+    color: @footer-text-color;
+    padding: 2rem;
+    text-align: center;
+    border-radius: @footer-border-radius @footer-border-radius 0 0;
+    margin-left: @spacing;
+    margin-right: @spacing;
+    margin-top: 52px;
+}
+
+.footer-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.footer-nav ul li a {
+    text-decoration: none;
+    color: @footer-text-color;
+    font-weight: bold;
+}
+
+.footer-social .redes a {
+    margin: 0 0.5rem;
+    display: inline-block;
+}
+
+.footer-social .redes img {
+    width: 30px;
+    height: 30px;
+}
+
+.footer p {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}

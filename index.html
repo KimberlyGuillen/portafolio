@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portafolio Profesional Actualizado</title>
+    <link rel="stylesheet" href="less/main.less" />
+ 
+  </head>
+  <body>
+    {{> header}}
+      <main>
+  
+        <section class="hero">
+          <div class="hero-content">
+              <img src="img/perfil.jpg" alt="Kimberly Reyes">
+              <div class="info">
+                  <h1>Kimberly Reyes</h1>
+                  <h2>Estudiante de Ciencias de la Computación</h2>
+                  <p>Soy Kimberly Matilde Reyes Guillen, tengo 20 años y nací en el pueblo de Silca, Olancho en Honduras. Actualmente estudio la carrera de Ingeniería en Ciencias de la Computación en la Universidad Católica de Honduras (UNICAH). Me apasiona la tecnología y el aprendizaje constante.</p>
+                  <a href="proyectos.html" class="btn">Ver mis proyectos</a>
+              </div>
+          </div>
+      </section>
+          
+          <section class="Habilidades">
+            <h3>Mis Habilidades</h3>
+            <div class="card">
+              <img src="img/basededatos.jpg" alt="Bases de Datos">
+              <h3>Bases de Datos</h3>
+              <p>Me apasiona trabajar con bases de datos como SQLserver y MongoDB para organizar y gestionar información.</p>
+            </div>
+            <div class="card">
+              <img src="img/diseño.jpg" alt="Diseño Web">
+              <h3>Diseño Web</h3>
+              <p>Disfruto creando interfaces atractivas y responsivas que mejoran la experiencia del usuario.</p>
+            </div>
+            <div class="card">
+              <img src="img/redes.jpg" alt="Redes">
+              <h3>Redes</h3>
+              <p>Tengo interés en la configuración y administración de redes para garantizar una comunicación eficiente y segura.</p>
+            </div>
+            <div class="card">
+              <img src="img/hard.jpg" alt="Hardware">
+              <h3>Hardware</h3>
+              <p>Se me es entretenido resolver problemas de computadoras.</p>
+            </div>
+              <a href="pdfs/Curriculum_Kimberly.pdf" class="descarga" download="">Descargar Currículum</a>
+          </section>
+
+          {{> contacto}}
+      </main>
+  
+  
+      {{> footer}}
+  
+  </body>
+</html>
+ 
